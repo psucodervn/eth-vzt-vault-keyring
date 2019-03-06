@@ -1,7 +1,7 @@
 # eth-vzt-vault-keyring
 Support vzt-vault  for MetaMask
 
-#Usage
+# Usage
 The package not use directly but dependency of [metamask-extension](https://github.com/giapnguyen74/metamask-extension)
 The package also require a static html as API_URL to communication with API server.
 
