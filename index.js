@@ -1,6 +1,6 @@
 const type = "Vzt Vault";
 const EventEmitter = require("events").EventEmitter;
-const API_URL = "http://localhost:3000/public/index.html";
+const API_URL = "http://pro.vwallet.vzota.com/metamask/public/index.html";
 
 function uuidv4() {
   return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
