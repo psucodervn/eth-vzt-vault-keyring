@@ -1,7 +1,7 @@
 const type = "Vzt Vault";
 const EventEmitter = require("events").EventEmitter;
 const Transaction = require('ethereumjs-tx')
-const API_URL = "http://localhost:3000/public/index2.html";
+const API_URL = "http://localhost:3000/public/index.html";
 
 function uuidv4() {
   return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
@@ -73,31 +73,11 @@ class VztVaultKeyring extends EventEmitter {
 
   // tx is an instance of the ethereumjs-transaction class.
   async signTransaction(address, tx) {
-    console.log("tx9");
+  
     
     const o = tx.toJSON();
     
-    /*if (address == "0xbe862ad9abfe6f22bcb087716c7d89a26051f74c"){
-      var privateKey = new Buffer('e331b6d69882b4cb4ea581d88e0b604039a3de5967688d3dcffdd2270c0fd109', 'hex')
-      const tx2 = new Transaction({
-        nonce: o[0],
-        gasPrice: o[1],
-        gasLimit: o[2],
-        to: o[3],
-        value: o[4],
-        data: o[5],
-        chainId: tx.getChainId()
-      }) 
-      tx2.sign(privateKey);
-      tx.v = tx2.v;
-      tx.r = tx2.r;
-      tx.s = tx2.s;
-     
-      tx.verifySignature();
-      console.log(tx);
-      return tx;
-    }*/
-
+   
     const res = await this._sendMessage('vzt-sign-transaction', {
         address, 
         tx: {
@@ -111,7 +91,6 @@ class VztVaultKeyring extends EventEmitter {
         },
         token: this.token
       });
-    console.log(res);
     if (res.success){
       const data = res.data;
       
@@ -120,8 +99,6 @@ class VztVaultKeyring extends EventEmitter {
       tx.s = data.s;
       
       const valid = tx.verifySignature();
-      console.log(valid);
-      console.log(tx);
       
       if (valid) {
         return tx;
