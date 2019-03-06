@@ -1,0 +1,23 @@
+{
+  "name": "eth-vzt-vault-keyring",
+  "version": "0.0.1",
+  "description": "Support vzt-vault for MetaMask",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giapnguyen74/eth-vzt-vault-keyring.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giapnguyen74/eth-vzt-vault-keyring/issues"
+  },
+  "homepage": "https://github.com/giapnguyen74/eth-vzt-vault-keyring#readme",
+  "dependencies": {
+    "ethereumjs-tx": "^1.3.7",
+    "fetch": "^1.1.0"
+  }
+}
