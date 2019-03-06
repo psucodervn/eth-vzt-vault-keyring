@@ -1,6 +1,5 @@
 const type = "Vzt Vault";
 const EventEmitter = require("events").EventEmitter;
-const Transaction = require('ethereumjs-tx')
 const API_URL = "http://localhost:3000/public/index.html";
 
 function uuidv4() {
