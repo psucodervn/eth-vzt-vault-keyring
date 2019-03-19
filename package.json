@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/giapnguyen74/eth-vzt-vault-keyring#readme",
   "dependencies": {
-    "fetch": "^1.1.0"
-  }
+    "fetch": "^1.1.0",
+    "webextension-polyfill": "^0.4.0"
+  },
+  "devDependencies": {}
 }
