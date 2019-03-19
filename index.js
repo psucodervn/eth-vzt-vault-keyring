@@ -34,7 +34,7 @@ class VztVaultKeyring extends EventEmitter {
     //this.apiUrl = opts.apiUrl || API_URL;
     this.apiUrl = API_URL;
     this.accounts = opts.accounts || [];
-    this.accounts.push("0xbe862ad9abfe6f22bcb087716c7d89a26051f74c");
+    // this.accounts.push("0xbe862ad9abfe6f22bcb087716c7d89a26051f74c");
     this.token = opts.token
     return Promise.resolve();
   }
