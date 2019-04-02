@@ -119,7 +119,7 @@ class VztVaultKeyring extends EventEmitter {
     throw new Error('signTypedData Not supported on this device')
   }
 
-  signPersonalMessage (address, message) {
+  async signPersonalMessage (address, message) {
     const res = await this._sendMessage('vzt-sign-personal', {
       address, 
       message: message,
