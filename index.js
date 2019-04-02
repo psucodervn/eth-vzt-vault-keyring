@@ -119,8 +119,19 @@ class VztVaultKeyring extends EventEmitter {
     throw new Error('signTypedData Not supported on this device')
   }
 
-  signPersonalMessage (withAccount, message) {
-    throw new Error("signPersonalMessage Not supported on this device");
+  signPersonalMessage (address, message) {
+    const res = await this._sendMessage('vzt-sign-personal', {
+      address, 
+      message: message,
+      token: this.token
+    });
+    if (res.success){
+      const data = res.data;
+      return data.signature;
+    }
+    else {
+      throw res.message;
+    }
   }
 
   exportAccount(address) {
